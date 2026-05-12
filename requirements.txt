@@ -1,7 +1,6 @@
-numpy>=1.21.0
-opencv-python>=4.5.0
-streamlit>=1.35.0
-fastapi>=0.115.0
-uvicorn>=0.30.0
-python-multipart>=0.0.9
-PyJWT>=2.9.0
+numpy
+fastapi
+uvicorn
+python-multipart
+PyJWT
+opencv-python-headless
