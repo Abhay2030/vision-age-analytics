@@ -16,8 +16,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
 
-RUN python download_weights.py
-
 EXPOSE 8000 8501
 
 # Default process is API; compose overrides for dashboard.
