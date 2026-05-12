@@ -1,6 +1,6 @@
-numpy
 fastapi
 uvicorn
+numpy
 python-multipart
 PyJWT
 opencv-python-headless
