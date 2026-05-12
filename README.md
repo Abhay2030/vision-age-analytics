@@ -79,3 +79,100 @@ Services:
 
 - API: `http://localhost:8000`
 - Dashboard: `http://localhost:8501`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Age Detection Analytics
+
+Enterprise-grade AI-powered real-time age detection and analytics platform.
+
+Built using:
+- OpenCV DNN
+- FastAPI
+- Streamlit
+- SQLite
+- JWT Authentication
+- Docker
+- HTML/CSS/JavaScript
+
+---
+
+# Features
+
+## AI Features
+
+- Real-time face detection
+- AI-based age estimation
+- Multi-face tracking
+- Confidence calibration
+- Temporal smoothing
+- Analytics aggregation
+- Crowd analysis
+- Age bucket distribution
+- GPU acceleration support
+
+---
+
+# Backend Features
+
+- FastAPI REST API
+- JWT Authentication
+- Role-Based Access Control (RBAC)
+- Session persistence
+- Analytics APIs
+- Modular architecture
+- Docker deployment
+
+---
+
+# Frontend Features
+
+- Live browser camera analysis
+- Session dashboard
+- Analytics KPIs
+- Image upload analysis
+- Real-time visualization
+
+---
+
+# Tech Stack
+
+| Layer | Technology |
+|---|---|
+| AI Engine | OpenCV DNN |
+| Backend | FastAPI |
+| Dashboard | Streamlit |
+| Frontend | HTML/CSS/JS |
+| Database | SQLite |
+| Deployment | Docker |
+| Authentication | JWT |
+
+---
+
+# System Architecture
+
+Frontend → FastAPI → AI Engine → SQLite Storage → Analytics Layer
+
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/age-detection-pro.git
+cd age-detection-pro
