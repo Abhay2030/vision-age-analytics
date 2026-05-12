@@ -55,7 +55,7 @@ async function login() {
     const form = new URLSearchParams();
     form.append("username", username);
     form.append("password", password);
-    const res = await fetch("/auth/login", {
+    const res = await fetch("https://vision-age-analytics.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: form.toString(),
@@ -75,7 +75,7 @@ async function login() {
 async function analyzeBlob(blob, sourceLabel = "web_input") {
   const form = new FormData();
   form.append("file", blob, `${sourceLabel}.jpg`);
-  const res = await authFetch("/v1/analyze/image", { method: "POST", body: form });
+  const res = await authFetch("https://vision-age-analytics.onrender.com/v1/analyze/image", { method: "POST", body: form });
   const data = await res.json();
   if (!res.ok) throw new Error(JSON.stringify(data));
   output.textContent = JSON.stringify(data, null, 2);
@@ -172,7 +172,7 @@ function renderSessions(items) {
 
 async function loadSessions() {
   try {
-    const res = await authFetch("/v1/sessions?limit=20");
+    const res = await authFetch("https://vision-age-analytics.onrender.com/v1/sessions?limit=20");
     const data = await res.json();
     if (!res.ok) throw new Error(JSON.stringify(data));
     renderSessions(data.items || []);
@@ -197,7 +197,7 @@ async function loadSessionDetail() {
 
 async function refreshOverview() {
   try {
-    const res = await authFetch("/v1/overview");
+    const res = await authFetch("https://vision-age-analytics.onrender.com/v1/overview");
     const data = await res.json();
     if (!res.ok) throw new Error(JSON.stringify(data));
     updateOverview(data.overview || {});
