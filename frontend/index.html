@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Detection Pro</title>
+    <link rel="stylesheet" href="/frontend/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Age Detection Pro</h1>
+        <p class="sub">Enterprise-grade age analytics platform</p>
+      </div>
+      <div class="status-wrap">
+        <span id="authState" class="pill">Not logged in</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="grid two">
+        <article class="card">
+          <h2>Authentication</h2>
+          <div class="row">
+            <input id="username" placeholder="username (admin/viewer)" value="admin" />
+            <input id="password" placeholder="password" type="password" />
+            <button id="loginBtn">Login</button>
+          </div>
+          <p class="hint">Session token is stored in memory only.</p>
+        </article>
+        <article class="card">
+          <h2>Global Overview</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><span>Sessions</span><strong id="kpiSessions">-</strong></div>
+            <div class="kpi"><span>Avg Age</span><strong id="kpiAge">-</strong></div>
+            <div class="kpi"><span>Avg Faces/Frame</span><strong id="kpiFaces">-</strong></div>
+            <div class="kpi"><span>Top Bucket</span><strong id="kpiBucket">-</strong></div>
+          </div>
+          <button id="refreshOverviewBtn">Refresh Overview</button>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Live Camera Analysis</h2>
+          <video id="cameraView" autoplay playsinline muted></video>
+          <canvas id="captureCanvas" class="hidden"></canvas>
+          <div class="row">
+            <button id="startCameraBtn">Start Camera</button>
+            <button id="stopCameraBtn">Stop Camera</button>
+            <button id="analyzeFrameBtn">Analyze Current Frame</button>
+          </div>
+          <div class="row">
+            <label class="inline-label">Live Interval (ms)</label>
+            <input id="cameraInterval" type="number" value="1200" min="500" step="100" />
+            <button id="toggleLiveBtn">Start Live Analysis</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Upload Image</h2>
+          <div class="row">
+            <input id="imageFile" type="file" accept="image/*" />
+            <button id="analyzeBtn">Analyze Image</button>
+          </div>
+          <div id="bucketBars" class="bars"></div>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Session History (Admin)</h2>
+        <div class="row">
+          <button id="loadSessionsBtn">Load Sessions</button>
+          <input id="sessionIdInput" type="number" min="1" placeholder="Session ID" />
+          <button id="loadSessionDetailBtn">Load Session Detail</button>
+        </div>
+        <div id="sessionsTable"></div>
+      </section>
+
+      <section class="card">
+        <h2>Analysis Output</h2>
+        <pre id="analysisOutput" class="output">No analysis yet.</pre>
+      </section>
+    </main>
+
+    <script src="/frontend/app.js"></script>
+  </body>
+</html>

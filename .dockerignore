@@ -1,0 +1,14 @@
+.git
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.mp4
+*.avi
+*.mov
+snapshots
+agent-transcripts
+terminals
