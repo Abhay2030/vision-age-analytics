@@ -1,0 +1,10 @@
+.env
+*.db
+__pycache__/
+venv/
+weights/
+outputs/
+snapshots/
+reports/
+*.mp4
+*.avi
