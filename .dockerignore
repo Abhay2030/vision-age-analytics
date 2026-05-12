@@ -1,14 +1,25 @@
-.git
-.venv
-__pycache__
-*.pyc
-*.pyo
-*.pyd
+# Environment
+.env
+
+# Database
 *.db
-*.sqlite3
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# AI Weights
+weights/
+
+# Outputs
+outputs/
+snapshots/
+reports/
+
+# Videos
 *.mp4
 *.avi
 *.mov
-snapshots
-agent-transcripts
-terminals
